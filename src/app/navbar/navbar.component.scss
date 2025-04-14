@@ -1,0 +1,127 @@
+.topnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .right-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .profile-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    width: 180px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out;
+  
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+  
+    .profile-name {
+      font-weight: 500;
+      font-style: "Bold";
+      margin-right: 4px;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+
+    }
+  
+    .material-icons {
+      font-size: 20px;
+      color: #666;
+    }
+  }
+  
+  .dropdown-menu.profile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    width: 180px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 9999;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+
+    a{
+      font-family: 'Roboto', sans-serif;
+
+    }
+  
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.2s ease-in-out;
+      cursor: pointer;
+  
+      .material-icons {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+  
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+<div class="login-container">
+    <div class="login-card">
+        <h1>BH</h1>
+        @if(errorMessage){
+            <div class="errorMessage">{{  errorMessage  }}</div>
+        }
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+
+                <div class="input-field">
+                    <span class="material-icons">person</span>
+                    <input type="text" placeholder="USERNAME" 
+                    formControlName="username"
+                    id="username"
+                    [class.is-invalid]="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+                    />
+                  
+                  </div>
+
+                  @if (loginForm.get('username')?.invalid && loginForm.get('username')?.touched) {
+                    <div class="error-message">
+                      @if (loginForm.get('username')?.errors?.['required']) {
+                        <span class="text"> Username is required</span>
+                      }
+                    </div>
+                  }
+                
+                  <div class="input-field">
+                    <span class="material-icons">lock</span>
+                    <input type="password" placeholder="PASSWORD" id="password" formControlName="password"
+                    [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"/>
+                  </div>
+
+                  @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+                    <div class="error-message">
+                      @if (loginForm.get('password')?.errors?.['required']) {
+                        <span class="text">Password is required</span>
+                      } @else if (loginForm.get('password')?.errors?.['minlength']) {
+                        <span class="text">Password must be at least 6 characters</span>
+                      }
+                    </div>
+                  }
+                  <button type="submit" class="login-button">
+                    LOGIN
+                 </button>
+            </div>
+          
+        </form>
+    </div>
+
+</div>
