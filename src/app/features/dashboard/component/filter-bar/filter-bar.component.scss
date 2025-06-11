@@ -1,0 +1,60 @@
+.project-names {
+  font-weight: 600;
+  font-size: 12px;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.notification-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #fffde7, #fff9c4); // pale yellow
+  border: 1px solid #fdd835; // yellow border
+  border-left: 4px solid #fbc02d;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  border-radius: 4px;
+  position: relative;
+
+  .icon-wrapper {
+    margin-right: 10px;
+  }
+
+  .message {
+    flex: 1;
+    color: #000;
+
+    .view-link {
+      color: #d32f2f;
+      margin-left: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .close-icon {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 12px;
+    color: #333;
+  }
+}
+
+.project-names{
+    min-width: 100vh;
+    max-width: 100vh;
+}

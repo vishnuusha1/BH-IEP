@@ -1,0 +1,23 @@
+
+
+<app-header-layout></app-header-layout>
+
+<kendo-tabstrip (tabSelect)="onTabSelect($event)">
+  <ng-container *ngFor="let tab of tabs; let i = index">
+    <kendo-tabstrip-tab [title]="tab.title" [selected]="i === selectedTabIndex">
+      <ng-template kendoTabContent>
+        <ng-container *ngIf="tab.title === 'ISPO'">
+          <app-filter-bar></app-filter-bar>
+          <app-summary-tags></app-summary-tags>
+          <app-activities-table></app-activities-table>
+        </ng-container>
+        <ng-container *ngIf="tab.title !== 'ISPO'">
+          <p style="padding: 1rem;">{{ tab.title }} content goes here...</p>
+        </ng-container>
+      </ng-template>
+    </kendo-tabstrip-tab>
+  </ng-container>
+</kendo-tabstrip>
+
+
+

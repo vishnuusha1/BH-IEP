@@ -1,0 +1,181 @@
+/* src/app/filter-bar/filter-bar.component.scss */
+
+
+
+::ng-deep  .k-expander-header{
+    border-color: var(--kendo-color-border, rgba(0, 0, 0, 0.08))
+  
+}
+.filter-section-container {
+  display: flex;
+  flex-wrap: wrap; // Allows items to wrap to the next line on smaller screens
+  gap: 10px; // Space between dropdown groups
+  padding: 10px 15px;
+  //background-color: #f5f5f5; // Light grey background
+ // border: 1px solid #eee;
+  border: none;
+  border-radius: 4px;
+  align-items: flex-end; // Aligns the dropdowns to the bottom of the container
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column; // Stack label above dropdown
+  min-width: 50px; // Ensure a minimum width for dropdowns
+  flex-grow: 1; // Allow them to grow if space is available
+}
+
+.filter-group label {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+// Customizing Kendo Dropdown appearance to match the screenshot
+.kendo-dropdown-custom {
+  // This targets the host element of the Kendo DropdownList
+  width: 100%; // Make dropdown take full width of its parent .filter-group
+  height: 38px; // Fixed height to match screenshot
+
+  // Override Kendo's internal styling using ::ng-deep (or global styles)
+  ::ng-deep .k-dropdown-wrap {
+    border-radius: 4px;
+    border: 1px solid #ccc; // Match the border in the screenshot
+    background-color: white; // White background
+    padding: 0 10px; // Adjust padding inside the dropdown
+  }
+
+  ::ng-deep .k-input-inner {
+    font-size: 12px;
+    color: #333;
+  }
+
+  ::ng-deep .k-icon.k-i-arrow-s {
+    font-size: 16px; // Adjust arrow icon size
+    color: #666;
+  }
+}
+
+.filter-chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px; /* Space between chips */
+      padding: 10px 20px;
+      margin-bottom: 15px; /* Space below chips */
+    }
+    .filter-chip {
+      border-radius: 20px; /* Rounded corners */
+      padding: 5px 15px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      color: #555;
+      outline: none; /* Remove default button outline */
+    }
+    .filter-chip.primary {
+      background-color: #107c51; /* Green for primary */
+      color: white;
+      border-color: #107c51;
+    }
+    .filter-chip:hover {
+      opacity: 0.9;
+    }
+
+
+
+.k-scrollview-wrap {
+        margin: 0 auto;
+      }
+      .demo-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 15px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 24px;
+      }
+
+
+  /* src/app/features/dashboard/component/summary-tags/summary-tags.component.scss */
+.scrollview-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width:130vh;
+    height: 60px;
+
+}
+
+.nav-arrow {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 220px;
+  max-width: 250px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.card-desc {
+  font-size: 0.9em;
+  color: #666;
+}
+
+// Color classes
+.today-card {
+  background-color: #fcebeb;
+  border-color: #f0c0c0;
+}
+
+.this-week-card {
+  background-color: #ffffdd;
+  border-color: #ddddaa;
+}
+
+.next-week-card,
+.future-week-card {
+  background-color: #ffffff;
+}

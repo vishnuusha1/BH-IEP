@@ -1,0 +1,51 @@
+
+
+  <kendo-appbar position="top" class="kendoappbar">
+    <kendo-appbar-section>
+      <button kendoButton fillMode="flat" style="color: white" (click)="toggleDrawer()">
+        <kendo-svgicon [icon]="menuIcon"></kendo-svgicon>
+      </button>
+    </kendo-appbar-section>
+
+    <kendo-appbar-section>
+      <img src="assets/images/Logo-Dashboard.png" alt="Logo" class="app-logo" />
+    </kendo-appbar-section>
+
+    <!-- <kendo-appbar-spacer width="32px"></kendo-appbar-spacer> -->
+           <span class="seperator-pipe">|</span>
+             <span class="seperator-pipe">OTR</span>
+
+
+    <kendo-appbar-spacer></kendo-appbar-spacer>
+
+    <kendo-appbar-section>
+      <ul>
+        <li><span class="navigation-menu">My request</span></li>
+        <li><span class="navigation-menu">Support ticket</span></li>
+      </ul>
+    </kendo-appbar-section> 
+
+    <kendo-appbar-section class="actions">
+      <kendo-badge-container>
+        <button kendoButton fillMode="flat" >
+          <kendo-svgicon [icon]="bellIcon" ></kendo-svgicon>
+        </button>
+        <kendo-badge
+          shape="dot"
+          themeColor="warning"
+          size="small"
+          position="inside"
+        ></kendo-badge>
+      </kendo-badge-container>
+      <span class="k-appbar-separator"></span>
+    </kendo-appbar-section>
+
+    <kendo-appbar-section>
+      <kendo-avatar
+        [imageSrc]="userAvatar"
+        shape="circle"
+        width="26px"
+        height="26px"
+      ></kendo-avatar>
+    </kendo-appbar-section>
+  </kendo-appbar>

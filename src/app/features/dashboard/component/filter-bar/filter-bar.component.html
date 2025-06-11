@@ -1,0 +1,18 @@
+
+
+<!-- Project Titles Line -->
+<div class="project-names">
+  {{ displayedProjectNames }}
+</div>
+
+<!-- Notification Banner -->
+<div *ngIf="showBanner" class="notification-banner">
+  <span class="icon-wrapper">
+    <kendo-icon name="bell" [size]="'medium'" [themeColor]="'warning'"></kendo-icon>
+  </span>
+  <span class="message">
+    You have received <strong>{{ requestCount }} primary resource re assignment requests</strong>
+    <a class="view-link" (click)="onViewRequests()">View requests</a>
+  </span>
+  <span class="close-icon" (click)="dismiss()">✕</span>
+</div>

@@ -1,0 +1,20 @@
+@switch (selectedItem) {
+@case ('Operation') {
+<app-sidebar-content-contacts />
+}
+<!-- @case ('Notifications') {
+    <app-notifications />
+  }
+  @case ('Calendar') {
+    <app-calendar />
+  }
+  @case ('Attachments') {
+    <app-attachments />
+  }
+  @case ('Favourites') {
+    <app-favourites />
+  } -->
+@default {
+<p>Please select a category</p>
+}
+}

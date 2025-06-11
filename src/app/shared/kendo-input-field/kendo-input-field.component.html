@@ -1,0 +1,37 @@
+<kendo-formfield [showHints]="true" [showErrors]="true">
+    <kendo-label
+      [for]="name"          [text]="label"        [optional]="!required" ></kendo-label>
+
+    <ng-container [ngSwitch]="type">
+      <kendo-textbox
+        *ngSwitchCase="'text'"
+        [id]="name"           [value]="value"       [placeholder]="placeholder" [disabled]="isDisabled" (input)="onInput($event)" (blur)="onBlur()"     [name]="name"         ></kendo-textbox>
+
+      <kendo-textbox
+        *ngSwitchCase="'email'"
+        [id]="name"
+        [value]="value"
+        [placeholder]="placeholder"
+        [disabled]="isDisabled"
+        (input)="onInput($event)"
+        (blur)="onBlur()"
+        [name]="name"
+        type="email"          ></kendo-textbox>
+
+      <kendo-textbox
+        *ngSwitchCase="'password'"
+        [id]="name"
+        [value]="value"
+        [placeholder]="placeholder"
+        [disabled]="isDisabled"
+        (input)="onInput($event)"
+        (blur)="onBlur()"
+        [name]="name"
+        type="password"       ></kendo-textbox>
+    </ng-container>
+
+    <kendo-formhint *ngIf="hint">{{ hint }}</kendo-formhint>
+    <kendo-formerror *ngIf="isInvalidAndTouched">{{
+      errorMessage
+    }}</kendo-formerror>
+</kendo-formfield>

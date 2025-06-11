@@ -1,0 +1,86 @@
+<kendo-grid
+  [kendoGridBinding]="gridView"
+  kendoGridSelectBy="id"
+  [(selectedKeys)]="mySelection"
+  [selectable]="{ mode: 'multiple', drag: true }"
+  [pageSize]="20"
+  [pageable]="true"
+  [sortable]="true"
+  [reorderable]="true"
+  [resizable]="true"
+  [height]="400"
+  [columnMenu]="{ filter: true }"
+>
+ <ng-template kendoGridToolbarTemplate>
+  <div class="k-toolbar-content custom-toolbar">
+    <div class="left-section">
+      <span class="activities-title">Activities</span>
+      <span class="result-count">Result: 200 Activities</span>
+    </div>
+
+    <div class="right-section">
+      <kendo-textbox
+        class="search-box"
+        placeholder="Search in all columns..."
+        (valueChange)="onFilter($event)"
+      ></kendo-textbox>
+
+      <!-- <button kendoButton icon="search" look="flat"></button>
+      <button kendoButton icon="gear" look="flat"></button>
+      <button kendoButton icon="filter" look="flat"></button> -->
+    </div>
+  </div>
+</ng-template>
+
+
+
+  <kendo-grid-column field="project_id" [width]="150">
+  
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.projectId }}
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column field="activity_id" [width]="150">
+     
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.activityId }}
+      <a href="#" class="k-icon k-i-link" *ngIf="dataItem.hasLink"></a> <br />
+      <span class="rules-stream">{{ dataItem.rules_stream }}</span> </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column field="activity_name" [width]="300">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="activity-name-cell">
+        <span>{{ dataItem.activityName }}</span><br />
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column field="primary_resource_name" [width]="200">
+    <ng-template kendoGridHeaderTemplate let-column="column">
+      <div class="k-grid-header-wrap">
+         <span>{{ column.title }}</span>
+      </div>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="resource-name-cell">
+       {{ dataItem.primaryResource }}
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column field="early_date" [width]="130">
+    <ng-template kendoGridHeaderTemplate let-column="column">
+      <div class="k-grid-header-wrap">
+        <span>{{ column.title }}</span>
+      </div>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.earlyDate | date : 'MM-dd-yyyy' }}
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-pdf fileName="Activities.pdf" [repeatHeaders]="true"></kendo-grid-pdf>
+  <kendo-grid-excel fileName="Activities.xlsx"></kendo-grid-excel>
+</kendo-grid>

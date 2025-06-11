@@ -1,0 +1,27 @@
+<div class="login-container">
+  <div class="login-card">
+    <img src="assets/images/Logo.png" alt="App Logo" class="logo" />
+
+    <form class="k-form" [formGroup]="form">
+      <h3>Sign In</h3>
+
+      <kendo-label text="SSO Id">
+        <kendo-textbox formControlName="ssoid"></kendo-textbox>
+      </kendo-label>
+
+      <kendo-label text="Password">
+        <kendo-textbox formControlName="password"></kendo-textbox>
+      </kendo-label>
+
+      <div class="remember-me">
+        <kendo-checkbox formControlName="rememberMe" id="rememberMe"></kendo-checkbox>
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+        <button kendoButton  class="k-form-buttons" [disabled]="!form.valid" (click)="submitForm()">
+          Login
+        </button>
+      
+    </form>
+  </div>
+</div>

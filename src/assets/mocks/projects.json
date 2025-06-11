@@ -1,0 +1,127 @@
+[
+  {
+    "id": "currentProjects",
+    "text": "Current Projects",
+    "hasChildren": true,
+    "expanded": true,
+    "checked": false,
+    "items": [
+      {
+        "id": "1104096",
+        "text": "1104096-NCIC III Ammonia/...",
+        "hasChildren": false,
+        "checked": true,
+        "favorite": true
+      },
+      {
+        "id": "1104088",
+        "text": "1104088-Ar Ratawi",
+        "hasChildren": true,
+        "expanded": true,
+        "checked": true,
+        "items": [
+          {
+            "id": "1101188",
+            "text": "HCC - Train #2 & 3 without string...",
+            "hasChildren": false,
+            "checked": true
+          },
+          {
+            "id": "1004088",
+            "text": "HCC - Train #1 with string test +...",
+            "hasChildren": false,
+            "checked": true
+          },
+          {
+            "id": "other",
+            "text": "Other",
+            "hasChildren": true,
+            "expanded": true,
+            "checked": true,
+            "items": [
+              {
+                "id": "1114057a",
+                "text": "1114057",
+                "hasChildren": false,
+                "checked": true
+              },
+              {
+                "id": "1114057b",
+                "text": "1114057",
+                "hasChildren": false,
+                "checked": true
+              },
+              {
+                "id": "1114057c",
+                "text": "1114057",
+                "hasChildren": false,
+                "checked": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "9000133",
+        "text": "9000133-Leviathan Tex",
+        "hasChildren": false,
+        "checked": true,
+        "favorite": true
+      },
+      {
+        "id": "1709043",
+        "text": "1709043-Garraf",
+        "hasChildren": false,
+        "checked": true
+      },
+      {
+        "id": "1104057",
+        "text": "1104057-BP UCC HCC Package",
+        "hasChildren": false,
+        "checked": true
+      }
+    ]
+  },
+  {
+    "id": "1104043",
+    "text": "1104043-ASAB Lifting Project #2",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "1800475",
+    "text": "1800475-GTFT - GTCC - LP Booster c...",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "1105461",
+    "text": "1105461-Cepsa HVO Unit Verde Pro...",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "0506193",
+    "text": "0506193-Venture Global CP2 Phase...",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "584037",
+    "text": "5840737-P-70 4HE replacement",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "1103995",
+    "text": "1103995-Pluto 1 Upgrade LGBC",
+    "hasChildren": false,
+    "checked": false
+  },
+  {
+    "id": "1900976",
+    "text": "1900976-Perdaman: Syngas and Am...",
+    "hasChildren": false,
+    "checked": false
+  }
+]

@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+// kendo-tabstrip {
+//   width: 600px;
+//   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+// }
+
+kendo-tabstrip {
+    background-color: #f0f0f0; /* Light grey background for the entire strip */
+    border-radius: 8px; /* Slightly rounded corners for the whole container */
+     /* Padding inside the grey container */
+   // display: inline-block; /* Or block, depending on desired layout. Inline-block for fitting content */
+}
+
+.content {
+//   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  //gap: 10px;
+}
+
+
+.search-container {
+  width: 100%; /* Occupy full width of its container */
+  max-width: 400px; /* Adjust max width as needed */
+  display: flex; /* Ensure input and suffix align */
+  align-items: center; /* Center vertically */
+
+  .k-textbox k-input k-flat k-input-solid k-input-md{
+  border-radius: 30px !important;
+
+  }
+
+  input {
+    flex-grow: 1; /* Allow input to take available space */
+  }
+
+  .k-input-suffix {
+    margin-left: 8px; /* Space between input and icon */
+    // You might want to adjust icon color if it doesn't match screenshot
+    .k-icon {
+      color: #c80808; // Lighter gray for the icon
+    }
+  }
+}
+
+::ng-deep .filter-input .k-input,
+::ng-deep .filter-input.k-textbox {
+  border-radius: 23px !important;
+}
+
+
+.advanced-search {
+  background-color: #107c51; /* A shade of green, adjust as needed */
+  border-color: #107c51;
+  color: #fff;
+  padding: 0.75em 1.5em; 
+  border: none;
+  margin-top: 15px;
+  border-radius: 7px;
+}
+
+
+
+.result-display {
+  margin-top: 15px; /* Add some space above it */
+  font-family: var(--kendo-font-family); /* Use Kendo UI's font family for consistency */
+  font-size: 11px;
+  color: gray;
+}
+
+.result-count {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+kendo-treeview {
+  //border: 1px solid #eee;
+  padding: 10px;
+  //border-radius: 4px;
+  width: 250px;
+}
+
+.k-treeview-item {
+  padding: 5px 0;
+}
+
+.tree-node-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.star-icon {
+  color: #107c51;
+  font-size: 18px;
+  padding-left: 10px;
+}

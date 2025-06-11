@@ -1,0 +1,31 @@
+<div class="layout-container">
+
+
+
+  <kendo-drawer-container class="kendoDrawer">
+    <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [expanded]="drawerExpanded"
+      (select)="onSelect($event)">
+      <ng-template kendoDrawerItemTemplate let-item>
+        <span [ngClass]="getIconClass(item.iconStyle)" class="drawer-icon">
+          {{ item.icon }}
+        </span>
+        <span class="k-item-text">{{ item.text }}</span>
+      </ng-template>
+    </kendo-drawer>
+
+    <kendo-drawer-content class="content-wrapper">
+      <div class="header-with-border">
+  <div>Filter Contacts</div>
+  <div class="header-actions">
+    <span class="material-icons-outlined">more_horiz</span>
+    <span class="material-icons-outlined">west</span>
+  </div>
+</div>
+      <app-sidebar-content [selectedItem]="selected"></app-sidebar-content>
+
+    </kendo-drawer-content>
+
+    <app-operation-layout class="operation-layout"></app-operation-layout>
+
+  </kendo-drawer-container>
+</div>

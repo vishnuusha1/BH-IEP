@@ -1,0 +1,144 @@
+
+.layout-container{
+ height: 100%;
+ overflow: hidden;
+}
+.kendoDrawer{
+    height: 100vh;
+    margin-left: 50px;
+    width:calc(100% - 50px);
+}
+
+.k-drawer-mini .k-drawer.k-drawer-start, .k-drawer-expanded .k-drawer.k-drawer-start{
+  position: absolute;
+  left: 0;
+  min-width: 50px;
+  height: 100vh;
+  z-index: 10;
+  top:64px;
+}
+
+::ng-deep  .k-drawer-item.k-selected{
+  background-color: #116940;
+}
+
+::ng-deep .k-drawer-item.k-selected:hover{
+  background-color: #116940;
+
+}
+
+
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .side-bar-header {
+    width: 70%; 
+    margin-left: 30%; 
+    height: 60px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .content-wrapper {
+
+    width: 40%;
+    min-width: 300px;
+    max-width: 300px;
+    border-right: 1px solid #ddd;
+    //padding: 1rem;
+   // background-color: #dd28e3;
+    overflow-y: auto;
+    height: 100vh;
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+.header-with-border {
+  border-bottom: 1px solid #ccc;
+  padding: 11px 16px;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 51px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px; 
+}
+
+.material-icons-outlined {
+  font-size: 20px;
+  cursor: pointer;
+}
+.k-drawer-item.k-selected {
+    color: var(--kendo-color-on-primary, #ffffff);
+    background-color: #297e2c !important;
+}
+
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ccc;
+    background-color: #f4f6f8;
+    font-weight: 600;
+    font-size: 1rem;
+
+    .collapse-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: auto;
+
+      kendo-icon {
+        font-size: 1.25rem;
+        transition: transform 0.3s;
+      }
+    }
+  }
+::ng-deep .k-drawer-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-layout{
+    width: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+.drawer-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.more_horiz {
+  font-size: 18px;
+  padding-left: 10px;
+}
+.west {
+  font-size: 18px;
+  padding-left: 10px;
+}

@@ -1,0 +1,119 @@
+<kendo-expansionpanel title="Filter activities"  >
+     <div class="filter-section-container">
+  <div class="filter-group">
+    <label>View As</label>
+    <kendo-dropdownlist
+      [data]="viewAsOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedViewAs"
+      (valueChange)="onSelectionChange($event, 'View As')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+
+  <div class="filter-group">
+    <label>Functions</label>
+    <kendo-dropdownlist
+      [data]="functionsOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedFunctions"
+      (valueChange)="onSelectionChange($event, 'Functions')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+
+  <div class="filter-group">
+    <label>Document Type</label>
+    <kendo-dropdownlist
+      [data]="documentTypeOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedDocumentType"
+      (valueChange)="onSelectionChange($event, 'Document Type')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+ <div class="filter-group">
+    <label>Functions</label>
+    <kendo-dropdownlist
+      [data]="functionsOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedFunctions"
+      (valueChange)="onSelectionChange($event, 'Functions')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+   <div class="filter-group">
+    <label>Functions</label>
+    <kendo-dropdownlist
+      [data]="functionsOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedFunctions"
+      (valueChange)="onSelectionChange($event, 'Functions')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+   <div class="filter-group">
+    <label>Functions</label>
+    <kendo-dropdownlist
+      [data]="functionsOptions"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedFunctions"
+      (valueChange)="onSelectionChange($event, 'Functions')"
+      class="kendo-dropdown-custom"
+    >
+    </kendo-dropdownlist>
+  </div>
+  </div>
+  <div class="filter-chips-container">
+      <button kendoButton *ngFor="let chip of filterChips"
+              [class.primary]="chip.isPrimary"
+              class="filter-chip"
+              (click)="onChipClick(chip)">
+        {{ chip.text }} ({{ chip.count }})
+      </button>
+    </div>
+
+
+    <!-- <div class="card-scroll-wrapper">
+  <button class="nav-arrow" (click)="scrollLeft()">‹</button>
+
+  <div class="card-container" #cardScroll>
+    <div class="card" *ngFor="let item of weeks">
+      <div class="card-title">{{ item.title }}</div>
+      <div class="card-desc">{{ item.description }}</div>
+    </div>
+  </div>
+
+  <button class="nav-arrow" (click)="scrollRight()">›</button>
+</div> -->
+
+<div class="scrollview-wrapper">
+  <button class="nav-arrow" (click)="scrollLeft()">‹</button>
+
+  <div class="scroll-container" #scrollContainer>
+    <div
+      class="card"
+      *ngFor="let item of weeks"
+      [ngClass]="item.class"
+    >
+      <div class="card-title">{{ item.title }}</div>
+      <div class="card-desc">{{ item.description }}</div>
+    </div>
+  </div>
+
+  <button class="nav-arrow" (click)="scrollRight()">›</button>
+</div>
+
+
+    </kendo-expansionpanel>

@@ -1,0 +1,22 @@
+<div class="operation-header">
+  <h2>Operation</h2>
+  <div class="data-summary">
+<span class="last-uploaded">Last uploaded: <span class="uploaded-date">04 Feb 2025</span></span>
+    <span class="ytd">YTD</span>
+    
+    <kendo-circulargauge
+  [value]="value"
+  [scale]="{
+    max: 100
+  }"
+  color="#107c51"
+  width="50"
+>
+  <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+    {{ value }}%
+  </ng-template>
+</kendo-circulargauge>
+
+    <button kendoButton class="dovsbyButton" >Dev vs Buy</button>
+  </div>
+</div>

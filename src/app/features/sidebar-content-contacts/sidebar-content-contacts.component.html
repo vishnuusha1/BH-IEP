@@ -1,0 +1,120 @@
+<div class="wrapper">
+    <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+        <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+            <ng-template kendoTabContent>
+                <div class="content">
+
+                    <kendo-textbox class="filter-input" placeholder="Search a jobnumber or contact name..."
+                        (valueChange)="onSearchTermChange()">
+                        <ng-template kendoTextBoxSuffixTemplate>
+                            <kendo-svg-icon [icon]="searchIcon"></kendo-svg-icon>
+                        </ng-template>
+                    </kendo-textbox>
+
+                    <button kendoButton class="advanced-search" themeColor="primary" [svgIcon]="arrowRightSvg"
+                        (click)="onAdvancedSearchClick()">
+                        Advanced Search
+                    </button>
+
+                    <div class="result-display">
+                        Result: {{ numberOfContracts }} Contracts
+                    </div>
+
+                    <div class="kendo-treeview-container">
+
+                       <kendo-treeview
+  [nodes]="data"
+  [children]="children"
+  [hasChildren]="hasChildren"
+  textField="text"
+  kendoTreeViewCheckable
+  checkBy="text"
+  [(checkedKeys)]="checkedKeys"
+  (checkedKeysChange)="onCheckedKeysChange($event)"
+>
+  <ng-template kendoTreeViewNodeTemplate let-dataItem>
+    <div class="tree-node-content">
+      <span>{{ dataItem.text }}</span>
+      <span *ngIf="dataItem.favorite" class="material-icons-outlined star-icon">star</span>
+    </div>
+  </ng-template>
+</kendo-treeview>
+
+                    </div>
+
+
+                </div>
+            </ng-template>
+        </kendo-tabstrip-tab>
+
+        <kendo-tabstrip-tab title="All Contracts">
+            <ng-template kendoTabContent>
+                <div class="content">
+
+                    <kendo-textbox class="filter-input" placeholder="Search a jobnumber or contact name..."
+                        (valueChange)="onSearchTermChange()">
+                        <ng-template kendoTextBoxSuffixTemplate>
+                            <kendo-svg-icon [icon]="searchIcon"></kendo-svg-icon>
+                        </ng-template>
+                    </kendo-textbox>
+
+                    <button kendoButton class="advanced-search" themeColor="primary" [svgIcon]="arrowRightSvg"
+                        (click)="onAdvancedSearchClick()">
+                        Advanced Search
+                    </button>
+
+                    <div class="result-display">
+                        Result: {{ numberOfContracts }} Contracts
+                    </div>
+
+                    <div class="kendo-treeview-container">
+
+
+                        <kendo-treeview [nodes]="data" [children]="children" [hasChildren]="hasChildren"
+                            textField="text" kendoTreeViewCheckable checkBy="text" [(checkedKeys)]="checkedKeys"
+                            (checkedKeysChange)="onCheckedKeysChange($event)">
+                        </kendo-treeview>
+
+                    </div>
+
+
+                </div>
+            </ng-template>
+        </kendo-tabstrip-tab>
+
+        <kendo-tabstrip-tab title="Favorites">
+            <ng-template kendoTabContent>
+                <div class="content">
+
+                    <kendo-textbox class="filter-input" placeholder="Search a jobnumber or contact name..."
+                        (valueChange)="onSearchTermChange()">
+                        <ng-template kendoTextBoxSuffixTemplate>
+                            <kendo-svg-icon [icon]="searchIcon"></kendo-svg-icon>
+                        </ng-template>
+                    </kendo-textbox>
+
+                    <button kendoButton class="advanced-search" themeColor="primary" [svgIcon]="arrowRightSvg"
+                        (click)="onAdvancedSearchClick()">
+                        Advanced Search
+                    </button>
+
+                    <div class="result-display">
+                        Result: {{ numberOfContracts }} Contracts
+                    </div>
+
+                    <div class="kendo-treeview-container">
+
+                        <kendo-treeview [nodes]="data" [children]="children" [hasChildren]="hasChildren"
+                            textField="text" kendoTreeViewCheckable checkBy="text" [(checkedKeys)]="checkedKeys"
+                            (checkedKeysChange)="onCheckedKeysChange($event)">
+                        </kendo-treeview>
+
+                    </div>
+
+
+                </div>
+            </ng-template>
+        </kendo-tabstrip-tab>
+
+    </kendo-tabstrip>
+</div>
